@@ -1,9 +1,20 @@
+import Button from "../atoms/Button.jsx";
 import SocialMediaIcon from "../atoms/SocialMediaIcon.jsx";
 
 const Landing = () => (
   <div className="landing">
     <h1 className="landing__title">Javier Valdez</h1>
     <h2 className="landing__subtitle">Software Developer</h2>
+    <p className="landing__tagline">
+      Crafting fast, elegant web experiences with a focus on detail and impact.
+    </p>
+
+    <div className="landing__cta">
+      <a className="landing__cta-hint" href="#portfolio">
+        See the full portfolio
+      </a>
+      <Button className="landing__cta-button" text="Explore Work" link="#portfolio" />
+    </div>
 
     <div className="landing__social-container">
       <SocialMediaIcon
@@ -24,6 +35,10 @@ const Landing = () => (
       src="assets/Images/Programing-landing-page.svg"
       alt=""
     />
+    <div className="landing__scroll">
+      <span>Scroll</span>
+      <div className="landing__scroll-indicator"></div>
+    </div>
   </div>
 );
 

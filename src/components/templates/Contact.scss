@@ -4,28 +4,36 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: fadeUp 0.8s ease both;
+  background: rgba(15, 22, 48, 0.7);
+  border: 1px solid rgba(124, 255, 178, 0.18);
+  border-radius: 20px;
+  padding: 3rem 2.4rem;
+  box-shadow: 0 20px 45px rgba(5, 10, 30, 0.45);
   &__image {
     width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
   }
   &__text {
-    margin-top: 40px;
-    font-size: 4rem;
-    font-family: $font-1;
+    margin-top: 24px;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-family: $font-2;
     text-align: center;
   }
   &__button {
-    width: 50%;
-    height: 60px;
-    margin-top: 48px;
-    font-size: 1.6rem;
+    width: 60%;
+    height: 5rem;
+    margin: 32px auto 0;
+    font-size: 1.4rem;
     font-family: $font-1;
     font-weight: 700;
   }
   &__phrase {
-    margin-top: 28px;
-    font-size: 2rem;
+    margin-top: 20px;
+    font-size: 1.6rem;
     text-align: center;
-    color: rgb(161, 161, 161);
+    color: rgba(234, 240, 255, 0.6);
   }
 }
 
@@ -38,6 +46,7 @@
     "phrase phrase phrase phrase"
     ;
     column-gap: 1.8rem;
+    padding: 3.5rem;
 
     &__image {
       grid-area: image;
@@ -45,10 +54,12 @@
     &__text {
       grid-area: text;
       justify-self: center;
+      text-align: left;
     }
     &__button {
       grid-area: button;
-      justify-self: center;
+      justify-self: flex-start;
+      margin-left: 0;
     }
     &__phrase {
       grid-area: phrase;

@@ -1,17 +1,30 @@
 @use "../../colors_and_fonts.scss" as *;
 
 .button{
-  border-radius: 10px;
-  color: black;
-
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 2px;
+  background: linear-gradient(120deg, $contrast-color1, $contrast-color2);
+  color: #0b1022;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   div{
-    border-radius: 10px;
-    background-color: $contrast-color1;
+    border-radius: 999px;
+    background: #0f1736;
+    color: #eaf0ff;
     height: 100%;
     width: 100%;
+    min-height: 4.6rem;
+    padding: 0 2.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
+}
+
+.button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(40, 224, 255, 0.18);
 }

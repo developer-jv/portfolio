@@ -1,30 +1,65 @@
 @use "../../colors_and_fonts.scss" as *;
 
 .portfolio {
-
-  h3 {
-
-  }
-}
-
-.portfolio {
+  animation: fadeUp 0.8s ease both;
   &__title {
     align-self: flex-start;
-    font-size: 4rem;
-    font-family: $font-1;
-
+    font-size: clamp(2.8rem, 4vw, 4.2rem);
+    font-family: $font-3;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
 
   &__project-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
-    margin-top: 24px;
-
+    gap: 24px;
+    margin-top: 32px;
     width: 100%;
   }
 
   &__component {
     width: 100%;
+  }
+
+  &__cta {
+    margin-top: 4.5rem;
+    width: 100%;
+    padding: 2.4rem;
+    border-radius: 18px;
+    background: linear-gradient(
+      120deg,
+      rgba(40, 224, 255, 0.12),
+      rgba(124, 255, 178, 0.12)
+    );
+    border: 1px solid rgba(40, 224, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: flex-start;
+  }
+
+  &__cta p {
+    font-size: 1.6rem;
+    color: rgba(234, 240, 255, 0.8);
+  }
+
+  &__cta-button {
+    width: 16rem;
+    height: 4.6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio {
+    &__cta {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__cta p {
+      max-width: 60%;
+    }
   }
 }

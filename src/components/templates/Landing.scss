@@ -2,79 +2,162 @@
 
 .landing {
   display: grid;
-  justify-content: center;
-  justify-items: stretch;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "title title title"
-    "subtitle subtitle subtitle"
-    "image image social";
-
+    "title"
+    "subtitle"
+    "tagline"
+    "cta"
+    "image"
+    "social";
+  gap: 1.6rem;
   margin-top: 20px;
+  min-height: 80vh;
+  padding-top: 4rem;
+  position: relative;
+  animation: fadeUp 0.8s ease both;
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__tagline {
+    grid-area: tagline;
+    font-size: 1.7rem;
+    color: rgba(234, 240, 255, 0.7);
+    letter-spacing: 0.03em;
+    max-width: 52rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__cta {
+    grid-area: cta;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__cta-hint {
+    color: rgba(234, 240, 255, 0.72);
+    font-size: 1.4rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  &__cta-button {
+    width: 20rem;
+    height: 4.8rem;
+  }
 
   &__social-container {
     grid-area: social;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    gap: 1.2rem;
+    margin-top: 2rem;
   }
 
   &__social-icon {
-    max-width: 70px;
-    width: 80%;
+    max-width: 48px;
+    width: 100%;
   }
 
   &__img {
     grid-area: image;
-    max-width: 60rem;
-    margin-top: 3rem;
+    max-width: 52rem;
+    margin: 2rem auto 0;
     width: 100%;
+    animation: float 6s ease-in-out infinite;
   }
 
   &__subtitle {
     grid-area: subtitle;
-    font-family: $font-3;
-    font-size: 4rem;
+    font-family: $font-2;
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    color: rgba(234, 240, 255, 0.82);
   }
   &__title {
     grid-area: title;
-    font-family: $font-1;
-    font-size: 9.5rem;
+    font-family: $font-3;
+    font-size: clamp(3.6rem, 8vw, 8.8rem);
     font-weight: 700;
-
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     text-align: center;
+    text-shadow: 0 8px 30px rgba(40, 224, 255, 0.25);
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(234, 240, 255, 0.5);
+  }
+
+  &__scroll-indicator {
+    width: 32px;
+    height: 2px;
+    background: linear-gradient(90deg, $contrast-color1, $contrast-color2);
+    animation: pulse 1.4s ease-in-out infinite;
   }
 }
 
 @media only screen and (min-width: 550px) {
 
   .landing {
-
+    grid-template-columns: 1.1fr 0.9fr;
     grid-template-areas:
-      "title title image"
-      "title title image"
-      "subtitle subtitle image"
-      "social social image";
+      "title image"
+      "subtitle image"
+      "tagline image"
+      "cta image"
+      "social image";
+    gap: 2.4rem;
 
     &__social-container {
-      flex-direction: row;
-      justify-content: center;
-      column-gap: 2.0rem;
+      justify-content: flex-start;
       align-self: flex-start;
     }
 
     &__img {
+      margin-top: 0;
     }
     &__social-icon {
     }
     &__subtitle {
+      text-align: left;
+      margin-top: 0;
     }
     &__title {
+      text-align: left;
       align-self: flex-end;
     }
+
+    &__tagline {
+      text-align: left;
+      margin: 0;
+    }
+
+    &__cta {
+      align-items: flex-start;
+    }
   }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; transform: scaleX(0.9); }
+  50% { opacity: 1; transform: scaleX(1); }
+  100% { opacity: 0.4; transform: scaleX(0.9); }
 }

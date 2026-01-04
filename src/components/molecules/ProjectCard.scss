@@ -1,60 +1,78 @@
 @use "../../colors_and_fonts.scss" as *;
 
 .card {
-  border: 1px solid $contrast-color2;
-  border-radius: 10px;
-  box-shadow: 8px 0px 10px 1px rgba(0,0,0,0.3);
-  height: 50rem;
+  border: 1px solid rgba(40, 224, 255, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(5, 10, 30, 0.45);
+  background: rgba(15, 22, 48, 0.72);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
 
   &__image {
     width: 100%;
-    height: 30rem;
+    height: 22rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 18px 18px 0 0;
   }
 
   &__description {
     max-width: 90%;
     margin: 0 auto;
     margin-top: 16px;
+    color: #eaf0ff;
     h3 {
       font-family: $font-2;
-      font-size: 2rem;
-      font-weight: 600;
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
     }
   }
 
   &__technologies {
     margin-top: 16px;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
     justify-items: start;
-    gap: 12px 0px;
-    height: 100%;
+    gap: 12px;
+    height: auto;
   }
 
   &__buttons {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    gap: 1.2rem;
+    margin: 20px 0 24px;
     a {
       width: 45%;
-      height: 35px;
+      height: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       div {
-        font-size: 1.8rem;
-        color: black;
+        font-size: 1.5rem;
+        color: #0b1022;
+        font-weight: 700;
       }
 
-      background-color: $contrast-color2;
-      border-radius: 10px;
+      background: linear-gradient(120deg, $contrast-color1, $contrast-color2);
+      border-radius: 999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
   }
+}
+
+.card__buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(124, 255, 178, 0.25);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(5, 10, 30, 0.6);
+  border: 1px solid rgba(124, 255, 178, 0.35);
 }
