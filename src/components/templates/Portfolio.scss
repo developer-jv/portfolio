@@ -150,6 +150,10 @@
       grid-row: 2;
     }
 
+    &__nav:hover {
+      transform: translateY(-1px);
+    }
+
     &__nav--prev {
       grid-column: 1;
     }
