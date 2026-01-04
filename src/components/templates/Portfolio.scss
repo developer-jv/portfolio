@@ -24,6 +24,7 @@
     scroll-behavior: smooth;
     padding: 0 2.6rem 0.5rem;
     width: 100%;
+    align-items: stretch;
   }
 
   &__track::-webkit-scrollbar {
@@ -35,8 +36,10 @@
   }
 
   &__slide {
-    flex: 0 0 100%;
+    flex: 0 0 92%;
     scroll-snap-align: start;
+    display: flex;
+    height: 100%;
   }
 
   &__nav {
@@ -64,11 +67,11 @@
   }
 
   &__nav--prev {
-    left: -2rem;
+    left: -5%;
   }
 
   &__nav--next {
-    right: -2rem;
+    right: -3%;
   }
 
   &__cta {
@@ -99,10 +102,10 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .portfolio {
     &__slide {
-      flex: 0 0 60%;
+      flex: 0 0 75%;
     }
 
     &__cta {
@@ -117,22 +120,50 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 900px) {
   .portfolio {
     &__slide {
-      flex: 0 0 45%;
+      flex: 0 0 55%;
     }
   }
 }
 
 @media only screen and (max-width: 600px) {
   .portfolio {
+    &__carousel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      row-gap: 1.2rem;
+    }
+
+    &__track {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      padding: 0 0.5rem 0.5rem;
+    }
+
+    &__nav {
+      position: static;
+      transform: none;
+      justify-self: center;
+      grid-row: 2;
+    }
+
     &__nav--prev {
-      left: 0;
+      grid-column: 1;
     }
 
     &__nav--next {
-      right: 0;
+      grid-column: 2;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .portfolio {
+    &__slide {
+      flex: 0 0 50%;
     }
   }
 }
