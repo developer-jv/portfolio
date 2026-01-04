@@ -21,6 +21,13 @@ $margintop: 24px;
     box-shadow: 0 18px 36px rgba(5, 10, 30, 0.4);
   }
 
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+  }
+
   &__side-nav-menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -112,24 +119,15 @@ $margintop: 24px;
 
 @media only screen and (min-width: 1023px) {
   .about-me {
-    display: grid;
-    grid-template-areas:
-      "title title"
-      "image comp";
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1.5rem;
-    row-gap: 5.5rem;
-    align-items: center;
-
-    h3 {
-      grid-area: title;
+    &__layout {
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
     }
 
     &__component {
-      grid-area: comp;
-      width: 100%;
+      width: 60%;
       max-width: 60rem;
-
       align-self: flex-end;
     }
 
@@ -142,11 +140,9 @@ $margintop: 24px;
     }
 
     &__ilustrations {
-      grid-area: image;
-      width: 60%;
-      max-width: 300px;
+      width: 40%;
+      max-width: 320px;
       margin-top: 0;
-      justify-self: center;
     }
   }
 
