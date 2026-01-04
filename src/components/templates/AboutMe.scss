@@ -64,6 +64,7 @@ $margintop: 24px;
   &__info-container {
     margin-top: $margintop;
     width: 100%;
+    position: relative;
   }
 
   &__ilustrations {
@@ -97,14 +98,25 @@ $margintop: 24px;
   gap: 16px 16px;
 }
 
+.about-me__panel {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1000px;
+  overflow: hidden;
+  transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease;
+}
+
 .show {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  max-height: 1000px;
 }
 
 .noShow {
-  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  max-height: 0;
+  pointer-events: none;
 }
 
 .selected {
@@ -127,8 +139,10 @@ $margintop: 24px;
 
     &__component {
       width: 60%;
+      height: 100%;
       max-width: 60rem;
       align-self: flex-end;
+      
     }
 
     &__side-nav-menu {
@@ -141,7 +155,8 @@ $margintop: 24px;
 
     &__ilustrations {
       width: 40%;
-      max-width: 320px;
+      height: 100%;
+      max-width: 420px;
       margin-top: 0;
     }
   }

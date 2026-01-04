@@ -59,11 +59,11 @@ const AboutMe = () => {
           </div>
 
           <div className="about-me__info-container">
-            <div
-              className={`about-me-info ${
-                infoSelected === 1 ? "show" : "noShow"
-              }`}
-            >
+          <div
+            className={`about-me__panel about-me-info ${
+              infoSelected === 1 ? "show" : "noShow"
+            }`}
+          >
               <p>
                 Software developer. I like to do both frontend and backend in a web
                 application
@@ -78,9 +78,11 @@ const AboutMe = () => {
               </p>
               <p>I am constantly learning. Student at USAC and Platzi 🎓.</p>
             </div>
-            <div
-              className={`studies ${infoSelected === 2 ? "show" : "noShow"}`}
-            >
+          <div
+            className={`about-me__panel studies ${
+              infoSelected === 2 ? "show" : "noShow"
+            }`}
+          >
               {studiesLocalData.map((study) => (
                 <StudiesInfo
                   key={study.title}
@@ -91,7 +93,11 @@ const AboutMe = () => {
                 />
               ))}
             </div>
-            <div className={`skills ${infoSelected === 3 ? "show" : "noShow"}`}>
+          <div
+            className={`about-me__panel skills ${
+              infoSelected === 3 ? "show" : "noShow"
+            }`}
+          >
               {skillLocalData.map((item) => (
                 <Skill key={item.text} src={item.imageSrc} text={item.text} />
               ))}
