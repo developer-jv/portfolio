@@ -72,7 +72,6 @@ $margintop: 24px;
     img {
       width: 100%;
       border-radius: 16px;
-      border: 1px solid rgba(40, 224, 255, 0.18);
       box-shadow: 0 20px 40px rgba(5, 10, 30, 0.5);
     }
   }
@@ -142,7 +141,7 @@ $margintop: 24px;
       height: 100%;
       max-width: 60rem;
       align-self: flex-end;
-      
+
     }
 
     &__side-nav-menu {
