@@ -29,6 +29,7 @@
     right: 0;
     top: 10%;
     height: 100%;
+    width: 200%;
     background: linear-gradient(
       180deg,
       rgba(40, 224, 255, 0) 0%,
@@ -224,18 +225,18 @@
 @keyframes shimmer {
   0%, 55% {
     opacity: 0;
-    transform: translateY(45%);
+    transform: translate(-30%, 45%);
   }
   60% {
     opacity: 0.5;
   }
   70% {
     opacity: 0;
-    transform: translateY(-35%);
+    transform: translate(-30%, -35%);
   }
   100% {
     opacity: 0;
-    transform: translateY(40%);
+    transform: translate(-30%, 40%);
   }
 }
 
