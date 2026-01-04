@@ -30,11 +30,13 @@ const Landing = () => (
         src="assets/Icons/github.svg"
       />
     </div>
-    <img
-      className="landing__img"
-      src="assets/Images/Programmer_Icon-removebg-preview.png"
-      alt="Developer illustration"
-    />
+    <div className="landing__image-wrap">
+      <img
+        className="landing__img"
+        src="assets/Images/Programmer_Icon-removebg-preview.png"
+        alt="Developer illustration"
+      />
+    </div>
     <div className="landing__scroll">
       <span>Scroll</span>
       <div className="landing__scroll-indicator"></div>
