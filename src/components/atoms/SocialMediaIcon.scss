@@ -1,0 +1,9 @@
+@use "../../colors_and_fonts.scss" as *;
+.social-media-icon{
+  width: inherit;
+  display: inline-flex;
+}
+
+.social-media-icon img{
+  width: 100%;
+}

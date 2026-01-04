@@ -1,3 +1,15 @@
+@use "./colors_and_fonts.scss" as *;
+@use "./components/molecules/Navbar.scss";
+@use "./components/templates/Landing.scss";
+@use "./components/templates/AboutMe.scss";
+@use "./components/templates/Portfolio.scss";
+@use "./components/templates/Contact.scss";
+@use "./components/molecules/ProjectCard.scss";
+@use "./components/molecules/End.scss";
+@use "./components/atoms/Button.scss";
+@use "./components/atoms/Skill.scss";
+@use "./components/atoms/SocialMediaIcon.scss";
+@use "./components/atoms/StudiesInfo.scss";
 /* You can add global styles to this file, and also import other style files */
 
 /*CSS RESET*/

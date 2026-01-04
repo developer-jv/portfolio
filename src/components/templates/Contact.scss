@@ -1,0 +1,57 @@
+@use "../../colors_and_fonts.scss" as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__image {
+    width: 100%;
+  }
+  &__text {
+    margin-top: 40px;
+    font-size: 4rem;
+    font-family: $font-1;
+    text-align: center;
+  }
+  &__button {
+    width: 50%;
+    height: 60px;
+    margin-top: 48px;
+    font-size: 1.6rem;
+    font-family: $font-1;
+    font-weight: 700;
+  }
+  &__phrase {
+    margin-top: 28px;
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(161, 161, 161);
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .contact {
+    display: grid;
+    grid-template-areas:
+    "image image text text"
+    "image image button button"
+    "phrase phrase phrase phrase"
+    ;
+    column-gap: 1.8rem;
+
+    &__image {
+      grid-area: image;
+    }
+    &__text {
+      grid-area: text;
+      justify-self: center;
+    }
+    &__button {
+      grid-area: button;
+      justify-self: center;
+    }
+    &__phrase {
+      grid-area: phrase;
+    }
+  }
+}

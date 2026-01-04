@@ -1,0 +1,14 @@
+@use "../../colors_and_fonts.scss" as *;
+
+.skill-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p{
+    font-family: $font-2;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-left: 8px;
+
+  }
+}
