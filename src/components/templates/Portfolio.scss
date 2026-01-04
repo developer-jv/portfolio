@@ -10,16 +10,65 @@
     text-transform: uppercase;
   }
 
-  &__project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
+  &__carousel {
+    width: 100%;
+    position: relative;
     margin-top: 32px;
+  }
+
+  &__track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0 2.6rem 0.5rem;
     width: 100%;
   }
 
-  &__component {
-    width: 100%;
+  &__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__track {
+    scrollbar-width: none;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  &__nav {
+    border: none;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    color: #0b1022;
+    background: linear-gradient(120deg, $contrast-color1, $contrast-color2);
+    box-shadow: 0 10px 20px rgba(40, 224, 255, 0.2);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  &__nav:hover {
+    transform: translateY(-50%) translateY(-2px);
+  }
+
+  &__nav--prev {
+    left: -2rem;
+  }
+
+  &__nav--next {
+    right: -2rem;
   }
 
   &__cta {
@@ -52,6 +101,10 @@
 
 @media only screen and (min-width: 768px) {
   .portfolio {
+    &__slide {
+      flex: 0 0 60%;
+    }
+
     &__cta {
       flex-direction: row;
       align-items: center;
@@ -60,6 +113,26 @@
 
     &__cta p {
       max-width: 60%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .portfolio {
+    &__slide {
+      flex: 0 0 45%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .portfolio {
+    &__nav--prev {
+      left: 0;
+    }
+
+    &__nav--next {
+      right: 0;
     }
   }
 }

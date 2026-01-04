@@ -2,7 +2,7 @@ import SocialMediaIcon from "../atoms/SocialMediaIcon.jsx";
 
 const End = () => (
   <footer className="footer">
-    <div className="footer__section1">Javier 2022</div>
+    <div className="footer__section1">Javier 2026</div>
     <div className="footer__section2"></div>
     <div className="footer__section3">
       <SocialMediaIcon

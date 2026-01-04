@@ -32,8 +32,8 @@ const Landing = () => (
     </div>
     <img
       className="landing__img"
-      src="assets/Images/Programing-landing-page.svg"
-      alt=""
+      src="assets/Images/Programmer_Icon-removebg-preview.png"
+      alt="Developer illustration"
     />
     <div className="landing__scroll">
       <span>Scroll</span>

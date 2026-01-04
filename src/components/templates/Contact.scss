@@ -2,67 +2,141 @@
 
 .contact {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 1200px;
+  width: 85%;
+  display: flex;
+  margin: 10rem auto;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: flex-start;
   animation: fadeUp 0.8s ease both;
   background: rgba(15, 22, 48, 0.7);
   border: 1px solid rgba(124, 255, 178, 0.18);
   border-radius: 20px;
   padding: 3rem 2.4rem;
   box-shadow: 0 20px 45px rgba(5, 10, 30, 0.45);
-  &__image {
+  gap: 2.4rem;
+  align-items: left;
+  text-align: left;
+  &__left,
+  &__right {
     width: 100%;
-    max-width: 380px;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: center;
+  }
+  &__image {
+    width: 180px;
+    height: 180px;
     margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    background: radial-gradient(
+      circle at top left,
+      rgba(40, 224, 255, 0.2),
+      rgba(15, 22, 48, 0.8)
+    );
+    border: 1px solid rgba(40, 224, 255, 0.2);
+    box-shadow: inset 0 0 20px rgba(40, 224, 255, 0.2);
+  }
+  &__image img {
+    width: 82px;
+    height: 82px;
+    filter: drop-shadow(0 8px 16px rgba(40, 224, 255, 0.35));
+    padding: 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+  }
+  &__orbit {
+    position: absolute;
+    inset: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(124, 255, 178, 0.35);
+    animation: pulseRing 2.6s ease-in-out infinite;
+  }
+  &__orbit--delay {
+    inset: 28px;
+    border-color: rgba(40, 224, 255, 0.35);
+    animation-delay: 1.2s;
   }
   &__text {
     margin-top: 24px;
     font-size: clamp(2.4rem, 4vw, 3.6rem);
     font-family: $font-2;
-    text-align: center;
+    text-align: inherit;
   }
   &__button {
     width: 60%;
     height: 5rem;
-    margin: 32px auto 0;
+    margin: 0 auto;
     font-size: 1.4rem;
     font-family: $font-1;
     font-weight: 700;
   }
   &__phrase {
-    margin-top: 20px;
+    margin-top: 0;
     font-size: 1.6rem;
-    text-align: center;
     color: rgba(234, 240, 255, 0.6);
+    max-width: 240px;
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.4;
   }
 }
 
 @media only screen and (min-width: 550px) {
   .contact {
-    display: grid;
-    grid-template-areas:
-    "image image text text"
-    "image image button button"
-    "phrase phrase phrase phrase"
-    ;
-    column-gap: 1.8rem;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
     padding: 3.5rem;
 
+    &__left {
+      align-items: center;
+      width: 40%;
+    }
+
+    &__right {
+      align-items: center;
+      width: 40%;
+    }
+
     &__image {
-      grid-area: image;
+      width: 200px;
+      height: 200px;
     }
-    &__text {
-      grid-area: text;
-      justify-self: center;
-      text-align: left;
-    }
-    &__button {
-      grid-area: button;
-      justify-self: flex-start;
-      margin-left: 0;
-    }
+
     &__phrase {
-      grid-area: phrase;
+      max-width: 280px;
+    }
+
+    &__button {
+      width: auto;
     }
   }
 }

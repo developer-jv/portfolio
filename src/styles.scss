@@ -180,10 +180,10 @@ body::before {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
   background-size: 48px 48px;
-  opacity: 0.25;
+  opacity: 0.45;
   z-index: 0;
 }
 
@@ -192,7 +192,7 @@ body::before {
   z-index: 1;
 }
 
-.portfolio, .about-me, .contact{
+.portfolio, .about-me{
   max-width: 1200px;
   width: 85%;
   display: flex;

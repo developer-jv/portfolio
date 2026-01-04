@@ -71,6 +71,7 @@
     margin: 2rem auto 0;
     width: 100%;
     animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 25px 40px rgba(10, 20, 60, 0.5));
   }
 
   &__subtitle {
@@ -100,15 +101,15 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1.2rem;
-    letter-spacing: 0.3em;
+    font-size: 1.4rem;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
     color: rgba(234, 240, 255, 0.5);
   }
 
   &__scroll-indicator {
-    width: 32px;
-    height: 2px;
+    width: 52px;
+    height: 3px;
     background: linear-gradient(90deg, $contrast-color1, $contrast-color2);
     animation: pulse 1.4s ease-in-out infinite;
   }

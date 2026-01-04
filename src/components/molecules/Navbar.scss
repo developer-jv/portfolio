@@ -43,8 +43,12 @@
 
     &__button {
       width: 14rem;
-      height: 70%;
-      margin-right: 2.0rem;
+      height: 4.2rem;
+      margin-right: 0;
+    }
+
+    &__button div {
+      min-height: 100%;
     }
     &__option {
       height: 70%;
@@ -85,9 +89,12 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      column-gap: 2.0rem;
-      width: 70%;
+      column-gap: 1.8rem;
+      width: auto;
+      margin-left: auto;
       height: inherit;
+      flex-wrap: nowrap;
+      white-space: nowrap;
     }
   }
 }

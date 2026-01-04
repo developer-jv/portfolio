@@ -16,7 +16,7 @@ $margintop: 24px;
     background: rgba(15, 22, 48, 0.6);
     border: 1px solid rgba(40, 224, 255, 0.12);
     border-radius: 18px;
-    padding: 2.4rem;
+    padding: 2.0rem;
     backdrop-filter: blur(10px);
     box-shadow: 0 18px 36px rgba(5, 10, 30, 0.4);
   }
@@ -114,11 +114,12 @@ $margintop: 24px;
   .about-me {
     display: grid;
     grid-template-areas:
-      "title  title title  "
-      "image image  comp"
-      "image image  comp";
+      "title title"
+      "image comp";
+    grid-template-columns: 1fr 1fr;
     column-gap: 1.5rem;
     row-gap: 5.5rem;
+    align-items: center;
 
     h3 {
       grid-area: title;
@@ -126,7 +127,8 @@ $margintop: 24px;
 
     &__component {
       grid-area: comp;
-      width: 60rem;
+      width: 100%;
+      max-width: 60rem;
 
       align-self: flex-end;
     }
