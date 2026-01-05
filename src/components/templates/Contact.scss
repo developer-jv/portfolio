@@ -43,13 +43,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 32px;
-    background: radial-gradient(
-      circle at top left,
-      rgba(40, 224, 255, 0.2),
-      rgba(15, 22, 48, 0.8)
-    );
-    border: 1px solid rgba(40, 224, 255, 0.2);
-    box-shadow: inset 0 0 20px rgba(40, 224, 255, 0.2);
   }
   &__image img {
     width: 82px;
@@ -89,7 +82,7 @@
   &__phrase {
     margin-top: 0;
     font-size: 1.6rem;
-    color: rgba(234, 240, 255, 0.6);
+    color: var(--text-muted);
     max-width: 240px;
   }
 }
@@ -113,11 +106,11 @@
   .contact {
     flex-direction: row;
     align-items: center;
-    text-align: left;
+    text-align: center;
     padding: 3.5rem;
 
     &__left {
-      align-items: flex-start;
+
       width: 40%;
     }
 

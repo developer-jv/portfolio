@@ -59,30 +59,26 @@ const AboutMe = () => {
           </div>
 
           <div className="about-me__info-container">
-          <div
-            className={`about-me__panel about-me-info ${
-              infoSelected === 1 ? "show" : "noShow"
-            }`}
-          >
+            <div
+              className={`about-me__panel about-me-info ${
+                infoSelected === 1 ? "show" : "noShow"
+              }`}
+            >
+              <p>Computer Science and Systems Engineering</p>
               <p>
-                Software developer. I like to do both frontend and backend in a web
-                application
+                <p>Focused on data engineering and modern web development.</p> I
+                build data pipelines, dashboards, and analytics solutions, and
+                I’ve worked with platforms like Microsoft Fabric/Power BI and
+                AWS-based data ecosystems. I’m a fast learner and a strong team
+                collaborator, motivated to deliver scalable and reliable
+                solutions.
               </p>
-              <p>I have to say that I enjoy the backend more.</p>
-              <p>
-                I focus on giving a good UI/UX experience and on the little details.
-              </p>
-              <p>
-                I am passionate about technology and I love discovering new ways to
-                achieve my goals.
-              </p>
-              <p>I am constantly learning. Student at USAC and Platzi 🎓.</p>
             </div>
-          <div
-            className={`about-me__panel studies ${
-              infoSelected === 2 ? "show" : "noShow"
-            }`}
-          >
+            <div
+              className={`about-me__panel studies ${
+                infoSelected === 2 ? "show" : "noShow"
+              }`}
+            >
               {studiesLocalData.map((study) => (
                 <StudiesInfo
                   key={study.title}
@@ -93,11 +89,11 @@ const AboutMe = () => {
                 />
               ))}
             </div>
-          <div
-            className={`about-me__panel skills ${
-              infoSelected === 3 ? "show" : "noShow"
-            }`}
-          >
+            <div
+              className={`about-me__panel skills ${
+                infoSelected === 3 ? "show" : "noShow"
+              }`}
+            >
               {skillLocalData.map((item) => (
                 <Skill key={item.text} src={item.imageSrc} text={item.text} />
               ))}

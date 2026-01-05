@@ -28,16 +28,9 @@ const skillsData = new Map([
     },
   ],
   [
-    "Angular",
-    {
-      imageSrc: "assets/Icons/Skills/Angular.svg",
-      text: "Angular",
-    },
-  ],
-  [
     "React",
     {
-      imageSrc: "assets/Icons/Skills/JS.svg",
+      imageSrc: "assets/Icons/Skills/react.svg",
       text: "React",
     },
   ],

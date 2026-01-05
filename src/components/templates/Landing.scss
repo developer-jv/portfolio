@@ -156,7 +156,7 @@
     font-size: 1.4rem;
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: rgba(234, 240, 255, 0.5);
+    color: var(--text-muted);
   }
 
   &__scroll-indicator {
