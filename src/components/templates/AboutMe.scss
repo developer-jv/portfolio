@@ -91,10 +91,10 @@ $margintop: 24px;
 
 .skills {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(120px, 1fr));
-  justify-items: start;
-  gap: 16px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
 }
 
 .about-me__panel {
@@ -161,6 +161,6 @@ $margintop: 24px;
   }
 
   .skills {
-    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    justify-content: flex-start;
   }
 }
