@@ -132,7 +132,7 @@
     font-size: clamp(2.2rem, 4vw, 3.6rem);
     text-align: center;
     margin-top: 0.5rem;
-    color: rgba(234, 240, 255, 0.82);
+    color: var(--heading-color);
   }
   &__title {
     grid-area: title;

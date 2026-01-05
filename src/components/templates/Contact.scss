@@ -14,7 +14,6 @@
   border: 1px solid rgba(124, 255, 178, 0.18);
   border-radius: 20px;
   padding: 3rem 2.4rem;
-  box-shadow: 0 20px 45px rgba(5, 10, 30, 0.45);
   gap: 2.4rem;
   align-items: center;
   text-align: center;
@@ -47,7 +46,6 @@
   &__image img {
     width: 82px;
     height: 82px;
-    filter: drop-shadow(0 8px 16px rgba(40, 224, 255, 0.35));
     padding: 10px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.9);

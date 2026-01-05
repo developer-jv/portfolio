@@ -302,11 +302,6 @@ body::before {
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.15);
 }
 
-:root[data-theme="light"] .contact__image img {
-  background: rgba(15, 23, 42, 0.2);
-  border-color: rgba(15, 23, 42, 0.35);
-}
-
 :root[data-theme="light"] .navbar__theme-toggle {
   background: rgba(15, 23, 42, 0.06);
   border-color: rgba(15, 23, 42, 0.2);

@@ -70,7 +70,7 @@ const Navbar = () => {
         <Button
           className="navbar__button"
           text="Contact me"
-          link="mailto:javier.valdez.15v@gmail.com"
+          link="https://www.linkedin.com/in/javier-valdez-one/"
         />
       </ul>
     </nav>

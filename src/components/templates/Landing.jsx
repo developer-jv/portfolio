@@ -4,9 +4,10 @@ import SocialMediaIcon from "../atoms/SocialMediaIcon.jsx";
 const Landing = () => (
   <div className="landing">
     <h1 className="landing__title">Javier Valdez</h1>
-    <h2 className="landing__subtitle">Software Developer</h2>
+    <h2 className="landing__subtitle">Data Engineer / Software Developer</h2>
     <p className="landing__tagline">
-      Crafting fast, elegant web experiences with a focus on detail and impact.
+      Building data pipelines and software products with clarity, performance,
+      and elegant UX.
     </p>
 
     <div className="landing__cta">
