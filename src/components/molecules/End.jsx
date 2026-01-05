@@ -8,13 +8,13 @@ const End = () => (
       <SocialMediaIcon
         className="footer__social-icon"
         name="linkedin"
-        href="https://www.linkedin.com/in/javier-valdez-grizzly/"
+        href="https://www.linkedin.com/in/javier-valdez-one/"
         src="assets/Icons/linkedin-circled.svg"
       />
       <SocialMediaIcon
         className="footer__social-icon"
         name="Github"
-        href="https://github.com/xavi-val"
+        href="https://github.com/developer-jv"
         src="assets/Icons/github.svg"
       />
     </div>

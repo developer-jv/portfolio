@@ -14,20 +14,24 @@ const Landing = () => (
       <a className="landing__cta-hint" href="#portfolio">
         See the full portfolio
       </a>
-      <Button className="landing__cta-button" text="Explore Work" link="#portfolio" />
+      <Button
+        className="landing__cta-button"
+        text="Explore Work"
+        link="#portfolio"
+      />
     </div>
 
     <div className="landing__social-container">
       <SocialMediaIcon
         className="landing__social-icon"
         name="linkedin"
-        href="https://www.linkedin.com/in/javier-valdez-grizzly/"
+        href="https://www.linkedin.com/in/javier-valdez-one/"
         src="assets/Icons/linkedin-circled.svg"
       />
       <SocialMediaIcon
         className="landing__social-icon"
         name="Github"
-        href="https://github.com/xavi-val"
+        href="https://github.com/developer-jv"
         src="assets/Icons/github.svg"
       />
     </div>
