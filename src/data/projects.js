@@ -7,18 +7,18 @@ const projectData = new Map([
       imageSrc: "assets/Images/Projects/BatataBit.PNG",
       title: "BatataBit Landing Page",
       skills: [getSkill("HTML"), getSkill("CSS"), getSkill("JS")],
-      demoLink: "",
+      demoLink: "https://practicing-landing-page.netlify.app/",
       codeLink: "",
     },
   ],
   [
     "Project 2",
     {
-      imageSrc: "assets/Images/Projects/Portfolio.PNG",
+      imageSrc: "assets/Images/Projects/portfolio.png",
       title: "Personal Portfolio",
       skills: [getSkill("React"), getSkill("Sass"), getSkill("TS")],
       demoLink: "",
-      codeLink: "https://github.com/xavi-val/Portfolio",
+      codeLink: "https://github.com/developer-jv/portfolio",
     },
   ],
 ]);
