@@ -76,6 +76,13 @@ const skillsData = new Map([
       text: "Git",
     },
   ],
+    [
+    "Airflow",
+    {
+      imageSrc: "assets/Icons/Skills/airflow.svg",
+      text: "Airflow",
+    },
+  ],
 ]);
 
 const getSkill = (name) => {

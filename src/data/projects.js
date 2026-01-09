@@ -4,6 +4,17 @@ const projectData = new Map([
   [
     "Project 1",
     {
+      imageSrc: "assets/Images/Projects/amazon_best_sellers.png",
+      title: "Amazon Best Sellers",
+      skills: [getSkill("Python"), getSkill("Airflow"), getSkill("SQL")],
+      demoLink:
+        "https://metabase.developerjv.com/public/dashboard/c7fbab5d-00cd-41a3-82d8-5250a3b9e21b",
+      codeLink: "https://github.com/developer-jv/bi_projects",
+    },
+  ],
+  [
+    "Project 2",
+    {
       imageSrc: "assets/Images/Projects/BatataBit.PNG",
       title: "BatataBit Landing Page",
       skills: [getSkill("HTML"), getSkill("CSS"), getSkill("JS")],
@@ -12,7 +23,7 @@ const projectData = new Map([
     },
   ],
   [
-    "Project 2",
+    "Project 3",
     {
       imageSrc: "assets/Images/Projects/portfolio.png",
       title: "Personal Portfolio",
