@@ -4,7 +4,7 @@ const projectData = new Map([
   [
     "Project 1",
     {
-      imageSrc: "assets/Images/Projects/amazon_best_sellers.png",
+      imageSrc: "assets/Images/Projects/amazon_best_sellers_v1.png",
       title: "Amazon Best Sellers",
       skills: [getSkill("Python"), getSkill("Airflow"), getSkill("SQL")],
       demoLink:
