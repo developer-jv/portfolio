@@ -4,6 +4,17 @@ const projectData = new Map([
   [
     "Project 1",
     {
+      imageSrc: "assets/Images/Projects/BrandPerformance.png",
+      title: "Circana Sales Out Analisis",
+      skills: [getSkill("Python"), getSkill("PowerBi"), getSkill("Excel")],
+      demoLink:
+        "https://github.com/developer-jv/Circana_Sales_Out",
+      codeLink: "https://github.com/developer-jv/Circana_Sales_Out",
+    },
+  ],
+  [
+    "Project 2",
+    {
       imageSrc: "assets/Images/Projects/amazon_best_sellers_v1.png",
       title: "Amazon Best Sellers",
       skills: [getSkill("Python"), getSkill("Airflow"), getSkill("SQL")],
@@ -13,7 +24,7 @@ const projectData = new Map([
     },
   ],
   [
-    "Project 2",
+    "Project 3",
     {
       imageSrc: "assets/Images/Projects/BatataBit.PNG",
       title: "BatataBit Landing Page",
@@ -23,7 +34,7 @@ const projectData = new Map([
     },
   ],
   [
-    "Project 3",
+    "Project 4",
     {
       imageSrc: "assets/Images/Projects/portfolio.png",
       title: "Personal Portfolio",

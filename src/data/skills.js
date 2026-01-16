@@ -76,11 +76,25 @@ const skillsData = new Map([
       text: "Git",
     },
   ],
-    [
+  [
     "Airflow",
     {
       imageSrc: "assets/Icons/Skills/airflow.svg",
       text: "Airflow",
+    },
+  ],
+  [
+    "PowerBi",
+    {
+      imageSrc: "assets/Icons/Skills/powerbi.svg",
+      text: "PowerBi",
+    },
+  ],
+   [
+    "Excel",
+    {
+      imageSrc: "assets/Icons/Skills/excel.svg",
+      text: "Excel",
     },
   ],
 ]);
