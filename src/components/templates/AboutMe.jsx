@@ -83,6 +83,13 @@ const AboutMe = () => {
                 collaborator, motivated to deliver scalable and reliable
                 solutions.
               </p>
+              <a
+                className="about-me__cv"
+                href="assets/Files/Resume Javier Valdez.pdf"
+                download
+              >
+                Download CV
+              </a>
             </div>
             <div
               className={`about-me__panel skills ${
@@ -99,7 +106,13 @@ const AboutMe = () => {
               }`}
             >
               {experienceData.map((item) => (
-                <div className="experience__item" key={item.title}>
+                <a
+                  className="experience__item"
+                  key={item.title}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img src={item.icon} alt="" className="experience__icon" />
                   <div className="experience__content">
                     <strong className="experience__title">{item.title}</strong>
@@ -109,7 +122,7 @@ const AboutMe = () => {
                       {item.description}
                     </p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
             <div
