@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { skillsData } from "../../data/skills.js";
 import { studiesData } from "../../data/studies.js";
+import { experienceData } from "../../data/experience.js";
 import Skill from "../atoms/Skill.jsx";
 import StudiesInfo from "../atoms/StudiesInfo.jsx";
 
@@ -19,10 +20,13 @@ const AboutMe = () => {
         setImg("assets/Images/javier.png");
         break;
       case 2:
-        setImg("assets/Images/books.svg");
+        setImg("assets/Images/Programing-landing-page.svg");
         break;
       case 3:
         setImg("assets/Images/Skills.svg");
+        break;
+      case 4:
+        setImg("assets/Images/books.svg");
         break;
       default:
         break;
@@ -48,13 +52,19 @@ const AboutMe = () => {
               onClick={() => changeInfo(2)}
               className={infoSelected === 2 ? "selected" : ""}
             >
-              <p>Studies</p>
+              <p>Experience</p>
             </div>
             <div
               onClick={() => changeInfo(3)}
               className={infoSelected === 3 ? "selected" : ""}
             >
               <p>Skills</p>
+            </div>
+            <div
+              onClick={() => changeInfo(4)}
+              className={infoSelected === 4 ? "selected" : ""}
+            >
+              <p>Studies</p>
             </div>
           </div>
 
@@ -75,8 +85,36 @@ const AboutMe = () => {
               </p>
             </div>
             <div
-              className={`about-me__panel studies ${
+              className={`about-me__panel skills ${
+                infoSelected === 3 ? "show" : "noShow"
+              }`}
+            >
+              {skillLocalData.map((item) => (
+                <Skill key={item.text} src={item.imageSrc} text={item.text} />
+              ))}
+            </div>
+            <div
+              className={`about-me__panel experience ${
                 infoSelected === 2 ? "show" : "noShow"
+              }`}
+            >
+              {experienceData.map((item) => (
+                <div className="experience__item" key={item.title}>
+                  <img src={item.icon} alt="" className="experience__icon" />
+                  <div className="experience__content">
+                    <strong className="experience__title">{item.title}</strong>
+                    <span className="experience__company">{item.company}</span>
+                    <span className="experience__period">{item.period}</span>
+                    <p className="experience__description">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div
+              className={`about-me__panel studies ${
+                infoSelected === 4 ? "show" : "noShow"
               }`}
             >
               {studiesLocalData.map((study) => (
@@ -87,15 +125,6 @@ const AboutMe = () => {
                   subtitle={study.subtitle}
                   href={study.href}
                 />
-              ))}
-            </div>
-            <div
-              className={`about-me__panel skills ${
-                infoSelected === 3 ? "show" : "noShow"
-              }`}
-            >
-              {skillLocalData.map((item) => (
-                <Skill key={item.text} src={item.imageSrc} text={item.text} />
               ))}
             </div>
           </div>
