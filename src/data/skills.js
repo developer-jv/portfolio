@@ -84,6 +84,27 @@ const skillsData = new Map([
     },
   ],
   [
+    "AWS",
+    {
+      imageSrc: "assets/Icons/Skills/aws.svg",
+      text: "AWS",
+    },
+  ],
+  [
+    "Spark",
+    {
+      imageSrc: "assets/Icons/Skills/spark.svg",
+      text: "Spark",
+    },
+  ],
+  [
+    "Terraform",
+    {
+      imageSrc: "assets/Icons/Skills/terraform.svg",
+      text: "Terraform",
+    },
+  ],
+  [
     "PowerBi",
     {
       imageSrc: "assets/Icons/Skills/powerbi.svg",

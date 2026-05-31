@@ -36,6 +36,22 @@ const projectData = new Map([
   [
     "Project 4",
     {
+      imageSrc: "assets/Images/Projects/lakehouse-medallion-aws.png",
+      title: "Lakehouse Medallion AWS",
+      skills: [
+        getSkill("AWS"),
+        getSkill("Python"),
+        getSkill("Spark"),
+        getSkill("Airflow"),
+        getSkill("Terraform"),
+      ],
+      demoLink: "https://github.com/developer-jv/bi_projects/tree/main/demo_projects/02_lakehouse_medallion_aws",
+      codeLink: "https://github.com/developer-jv/bi_projects/tree/main/demo_projects/02_lakehouse_medallion_aws",
+    },
+  ],
+  [
+    "Project 5",
+    {
       imageSrc: "assets/Images/Projects/portfolio.png",
       title: "Personal Portfolio",
       skills: [getSkill("React"), getSkill("Sass"), getSkill("TS")],
