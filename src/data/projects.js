@@ -10,8 +10,7 @@ const projectData = new Map([
         getSkill("AWS"),
         getSkill("Python"),
         getSkill("Spark"),
-        getSkill("Airflow"),
-        getSkill("Terraform"),
+        getSkill("Airflow")
       ],
       demoLink: "https://github.com/developer-jv/bi_projects/tree/main/demo_projects/02_lakehouse_medallion_aws",
       codeLink: "https://github.com/developer-jv/bi_projects/tree/main/demo_projects/02_lakehouse_medallion_aws",
